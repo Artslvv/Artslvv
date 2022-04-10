@@ -4,9 +4,9 @@ namespace CalculateArea
 {
     public class Circle : IFigure
     {
-        private double _radius;
+        private double[] _radius;
 
-        public Circle(double radius)
+        public Circle(double[] radius)
         {
             _radius = radius;
             
@@ -14,7 +14,7 @@ namespace CalculateArea
 
         public double GetArea()
         {
-            return Math.PI * Math.Pow(_radius, 2);
+            return Math.PI * Math.Pow(_radius[0], 2);
         }
     }
 }
