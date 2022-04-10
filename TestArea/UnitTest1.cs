@@ -17,13 +17,20 @@ namespace TestArea
         [Fact]
         public void TestTriandleReturnArea()
         {
-            var triangle1 = new Triangle(10,6,3);
+            var triangle1 = new Triangle(new double[] { 10, 6, 3 });
             var result = triangle1.GetArea();
             double expected = Math.Sqrt(Math.PI
                 * (Math.PI - 10)
                 * (Math.PI - 6)
                 * (Math.PI - 3));
             Assert.Equal(expected, result);
+        }
+        [Fact]
+        public void TestCheckRightTriangle()
+        {
+            var triangle2 = new Triangle(new double[] { 4, 5, 2 });
+            bool result = triangle2.ÑheckRightTriangle();
+            Assert.True(result);
         }
     }
 }
