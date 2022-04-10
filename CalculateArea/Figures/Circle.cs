@@ -9,7 +9,6 @@ namespace CalculateArea
         public Circle(double[] radius)
         {
             _radius = radius;
-            
         }
 
         public double GetArea()
